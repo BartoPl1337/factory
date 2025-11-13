@@ -2,7 +2,7 @@ package edu.io;
 
 public class TokenFactory {
     public static Token createEmptyToken() {
-        return new EmptyToken();
+        return EmptyToken.getInstance();
     }
 
     public static Token createGoldToken() {
@@ -10,7 +10,7 @@ public class TokenFactory {
     }
 
     public static Token createGoldToken(int amount) {
-        return new GoldToken(amount);
+        return GoldToken.getInstance(amount);
     }
 
     public static Token createFoodToken() {
@@ -18,7 +18,7 @@ public class TokenFactory {
     }
 
     public static Token createFoodToken(int amount) {
-        return new FoodToken(amount);
+        return FoodToken.getInstance(amount);
     }
 
     public static Token createShovelToken() {
